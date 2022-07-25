@@ -1,0 +1,37 @@
+<app-players style="top: 100px ;" class="playerPosition"></app-players>
+
+
+<div class="gameField">
+  <div class="cardStack">
+    <!-- card stack -->
+    <img
+      *ngFor="let c of [0, 1, 2, 3]; let i = index"
+      [ngStyle]="{ 'right.px': i * 6 }"
+      src="assets/img/card_cover.png"
+      alt=""
+    />
+    <img
+      (click)="drawACard()"
+      class="topCard"
+      style="right: 40px"
+      src="assets/img/card_cover.png"
+      alt=""
+    />
+<!-- stack of played cards -->
+    <img
+      *ngFor="let card of game.playedCards"
+      class="playedCards"
+      src="assets/img/{{ card }}.png"
+      alt=""
+    />
+<!-- current card animated -->
+    <img
+      (click)="drawACard()"
+      *ngIf="drawACardAnimation"
+      class="drawACard"
+      style="right: 35px"
+      src="assets/img/{{ currentCard }}.png"
+      alt=""
+    />
+  </div>
+</div>
