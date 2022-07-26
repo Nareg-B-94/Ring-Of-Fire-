@@ -3,16 +3,40 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { StartScreenComponent } from './start-screen/start-screen.component';
+import { GameComponent } from './game/game.component';
+import { PlayersComponent } from './game/players/players.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { AddPlayerDialogComponent } from './game/add-player-dialog/add-player-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import { GameRuleComponent } from './game/game-rule/game-rule.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StartScreenComponent,
+    GameComponent,
+    PlayersComponent,
+    AddPlayerDialogComponent,
+    GameRuleComponent,
   ],
   imports: [
+    MatCardModule,
+    MatDialogModule,
+    MatIconModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

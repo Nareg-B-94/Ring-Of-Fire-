@@ -1,0 +1,66 @@
+
+.startScreen {
+    background-color: #404040;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 80vh;
+        border-radius: 35px;
+    }
+
+
+}
+
+.startButton{
+        position: absolute;
+
+        bottom: 150px;
+
+        button {
+            font-size: 1.5em;
+            color: white;
+            cursor: pointer;
+            padding: 25px;
+            border-radius: 15px;
+            animation: myAnim1 5s ease-in-out 0s infinite alternate-reverse backwards;
+            background-color: rgb(139,63,49);
+
+            &:hover {
+                filter: brightness(1.2);
+            }
+        }
+
+        @keyframes myAnim1 {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(0.98);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.87);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+}
+
+    }
