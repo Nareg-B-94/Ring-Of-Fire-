@@ -15,6 +15,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { GameRuleComponent } from './game/game-rule/game-rule.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { GameRuleComponent } from './game/game-rule/game-rule.component';
   ],
   imports: [
     MatCardModule,
+    AngularFireModule.initializeApp(environment.firebase),
     MatDialogModule,
     MatIconModule,
     MatInputModule,

@@ -32,16 +32,16 @@
     <!-- current card animated -->
     <img
       (click)="drawACard()"
-      *ngIf="drawACardAnimation"
+      *ngIf="game.drawACardAnimation"
       class="drawACard"
       style="right: 35px"
-      src="assets/img/{{ currentCard }}.png"
+      src="assets/img/{{ game.currentCard }}.png"
       alt=""
     />
   </div>
 </div>
 
-<app-game-rule [card]="currentCard" class="pinBottom">
+<app-game-rule [card]="game.currentCard" class="pinBottom">
 
 
 </app-game-rule>
